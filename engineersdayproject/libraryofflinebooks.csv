@@ -1,0 +1,16 @@
+SI No,Name of the branch,No.of Volumes,No.of Titles,No.of International Journals,No.of National Journals,E-Journals
+1,Electronics Engineering,6087,1218,4,9,4153
+2,Computer Science Engineering,6770,1301,4,11,5462
+3,Electrical Engineering,3298,732,2,2,3152
+4,Mechanical Engineering,6305,1305,4,8,4548
+5,CSE-Artificial Intelligence & Machine Learning,654,103,1,3,136
+6,CSE-Data Science,586,101,1,3,128
+7,M.B.A,9614,1529,6,11,1513
+8,M.Tech(Computer Science),754,126,0,1,135
+9,M.Tech(VLSI),604,108,0,1,86
+10,M.Tech(P.E.),551,109,1,1,69
+11,M.Tech(P.S.),346,86,0,1,58
+12,M.Tech(CAD/CAM),578,102,0,1,82
+13,Diploma,1208,106,0,2,56
+14,M.C.A,485,124,3,4,84
+,Total,37840,7050,26,62,19635

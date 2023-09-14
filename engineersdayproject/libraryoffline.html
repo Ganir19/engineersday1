@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Search</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Navigation bar */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+#searchinput{width:200px;}
+
+/* Header */
+.header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+a{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/head.jpeg" style="height: 100px;width:90%;"><br>
+            <a href="inde.html">Home</a>
+            <a href="career.html">Career</a>
+            <a href="study.html">Study</a>
+            <a href="entertainment.html">Entertainment</a>
+            <a href="others.html">Others</a>
+        </nav>
+    </header>
+    <div class="header">
+        <h1>Welcome to Avanthi Educations</h1>
+        <p>Where Excellence Meets Education</p>
+    </div>
+    <h1>Search for Available Offline Books</h1>
+    <input type="text" id="searchInput" placeholder="Search for data...">
+    <table id="data-table">
+    
+            <thead><tr>
+                <td>SI No</td>
+                <td>Name of the branch</td>
+                <td>No.of Volumes</td>
+                <td>No.of Titles</td>
+                <td>No.of International Journals</td>
+                <td>No.of National Journals</td>
+                <td>E-Journals</td>
+            </tr></thead>
+            <tr>
+                <td>1</td>
+                <td>Electronics Engineering</td>
+                <td>6087</td>
+                <td>1218</td>
+                <td>4</td>
+                <td>9</td>
+                <td>4153</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Computer Science Engineering</td>
+                <td>6770</td>
+                <td>1301</td>
+                <td>4</td>
+                <td>11</td>
+                <td>5462</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Electrical Engineering</td>
+                <td>3298</td>
+                <td>732</td>
+                <td>2</td>
+                <td>2</td>
+                <td>3152</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Mechanical Engineering</td>
+                <td>6305</td>
+                <td>1305</td>
+                <td>4</td>
+                <td>8</td>
+                <td>4548</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>CSE-Artificial Intelligence &amp; Machine Learning</td>
+                <td>654</td>
+                <td>103</td>
+                <td>1</td>
+                <td>3</td>
+                <td>136</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>CSE-Data Science</td>
+                <td>586</td>
+                <td>101</td>
+                <td>1</td>
+                <td>3</td>
+                <td>128</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>M.B.A</td>
+                <td>9614</td>
+                <td>1529</td>
+                <td>6</td>
+                <td>11</td>
+                <td>1513</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>M.Tech(Computer Science)</td>
+                <td>754</td>
+                <td>126</td>
+                <td>0</td>
+                <td>1</td>
+                <td>135</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>M.Tech(VLSI)</td>
+                <td>604</td>
+                <td>108</td>
+                <td>0</td>
+                <td>1</td>
+                <td>86</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>M.Tech(P.E.)</td>
+                <td>551</td>
+                <td>109</td>
+                <td>1</td>
+                <td>1</td>
+                <td>69</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>M.Tech(P.S.)</td>
+                <td>346</td>
+                <td>86</td>
+                <td>0</td>
+                <td>1</td>
+                <td>58</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>M.Tech(CAD/CAM)</td>
+                <td>578</td>
+                <td>102</td>
+                <td>0</td>
+                <td>1</td>
+                <td>82</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Diploma</td>
+                <td>1208</td>
+                <td>106</td>
+                <td>0</td>
+                <td>2</td>
+                <td>56</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>M.C.A</td>
+                <td>485</td>
+                <td>124</td>
+                <td>3</td>
+                <td>4</td>
+                <td>84</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Total</td>
+                <td>37840</td>
+                <td>7050</td>
+                <td>26</td>
+                <td>62</td>
+                <td>19635</td>
+            </tr>
+        
+    </table>
+    <footer>
+        &copy; 2023 Avanthi Institute of Engineering and Technology. All rights reserved.
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const dataTable = document.getElementById('data-table');
+
+        searchInput.addEventListener('keyup', function () {
+            const searchValue = searchInput.value.toLowerCase();
+            const rows = dataTable.querySelectorAll('tbody tr');
+
+            rows.forEach(row => {
+                const dataCells = row.querySelectorAll('td');
+                let found = false;
+
+                dataCells.forEach(cell => {
+                    if (cell.textContent.toLowerCase().includes(searchValue)) {
+                        found = true;
+                    }
+                });
+
+                if (found) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

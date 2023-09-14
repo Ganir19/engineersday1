@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Search</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Navigation bar */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+#searchinput{width:200px;}
+
+/* Header */
+.header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+a{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/head.jpeg" style="height: 100px;width:90%;"><br>
+            <a href="inde.html">Home</a>
+            <a href="career.html">Career</a>
+            <a href="study.html">Study</a>
+            <a href="entertainment.html">Entertainment</a>
+            <a href="others.html">Others</a>
+        </nav>
+    </header>
+    <div class="header">
+        <h1>Welcome to Avanthi Educations</h1>
+        <p>Where Excellence Meets Education</p>
+    </div>
+    <h1>Search for Available Offline Books</h1>
+    <input type="text" id="searchInput" placeholder="Search for data...">
+    <table id="data-table">
+        <thead><tr>
+            <td>S.No</td>
+            <td>Name of the Branch</td>
+            <td>No of Videos</td>
+        </tr></thead>
+        <tr>
+            <td>1</td>
+            <td>Civil Engineering</td>
+            <td>125</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mechanical Engineering</td>
+            <td>204</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Electronics &amp; Communication Engineering</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Computer Science Engineering</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Basic Science and Humanities</td>
+            <td>206</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Electrical Engineering</td>
+            <td>71</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Management</td>
+            <td>53</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Total</td>
+            <td>829</td>
+        </tr>
+    </table>
+    <footer>
+        &copy; 2023 Avanthi Institute of Engineering and Technology. All rights reserved.
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const dataTable = document.getElementById('data-table');
+
+        searchInput.addEventListener('keyup', function () {
+            const searchValue = searchInput.value.toLowerCase();
+            const rows = dataTable.querySelectorAll('tbody tr');
+
+            rows.forEach(row => {
+                const dataCells = row.querySelectorAll('td');
+                let found = false;
+
+                dataCells.forEach(cell => {
+                    if (cell.textContent.toLowerCase().includes(searchValue)) {
+                        found = true;
+                    }
+                });
+
+                if (found) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

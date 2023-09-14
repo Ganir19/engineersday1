@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Mock Test</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h1 {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .question {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        /* Add some spacing between questions */
+        .question + .question {
+            margin-top: 30px;
+        }
+        button{
+            height: 30px;
+            width:80px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Online Mock Test</h1>
+    </header>
+    <div class="container">
+        <div class="question">
+            <h2>Question 1: Aptitude</h2>
+            <p>What is the result of 5 multiplied by 9?</p>
+            <label for="q1_optionA"><input type="radio" id="q1_optionA" name="q1" value="A"> A) 40</label><br>
+            <label for="q1_optionB"><input type="radio" id="q1_optionB" name="q1" value="B"> B) 45</label><br>
+            <label for="q1_optionC"><input type="radio" id="q1_optionC" name="q1" value="C"> C) 50</label><br>
+            <label for="q1_optionD"><input type="radio" id="q1_optionD" name="q1" value="D"> D) 55</label><br>
+            <button onclick="checkAnswer('q1', 'B')">Submit</button>
+            <p id="q1_result"></p>
+        </div>
+        
+        <div class="question">
+            <h2>Question 2: Aptitude</h2>
+            <p>If a shirt costs $20 and is on sale for 25% off, what is the sale price?</p>
+            <label for="q2_optionA"><input type="radio" id="q2_optionA" name="q2" value="A"> A) $5</label><br>
+            <label for="q2_optionB"><input type="radio" id="q2_optionB" name="q2" value="B"> B) $10</label><br>
+            <label for="q2_optionC"><input type="radio" id="q2_optionC" name="q2" value="C"> C) $15</label><br>
+            <label for="q2_optionD"><input type="radio" id="q2_optionD" name="q2" value="D"> D) $18</label><br>
+            <button onclick="checkAnswer('q2', 'C')">Submit</button>
+            <p id="q2_result"></p>
+        </div>
+
+        <div class="question">
+            <h2>Question 3: Reasoning</h2>
+            <p>Complete the series: 2, 4, 8, 16, ___</p>
+            <label for="q3_optionA"><input type="radio" id="q3_optionA" name="q3" value="A"> A) 20</label><br>
+            <label for="q3_optionB"><input type="radio" id="q3_optionB" name="q3" value="B"> B) 24</label><br>
+            <label for="q3_optionC"><input type="radio" id="q3_optionC" name="q3" value="C"> C) 32</label><br>
+            <label for="q3_optionD"><input type="radio" id="q3_optionD" name="q3" value="D"> D) 64</label><br>
+            <button onclick="checkAnswer('q3', 'C')">Submit</button>
+            <p id="q3_result"></p>
+        </div>
+
+        <div class="question">
+            <h2>Question 4: Reasoning</h2>
+            <p>Which number is the odd one out in the following series: 3, 7, 11, 14, 19, 23?</p>
+            <label for="q4_optionA"><input type="radio" id="q4_optionA" name="q4" value="A"> A) 7</label><br>
+            <label for="q4_optionB"><input type="radio" id="q4_optionB" name="q4" value="B"> B) 11</label><br>
+            <label for="q4_optionC"><input type="radio" id="q4_optionC" name="q4" value="C"> C) 14</label><br>
+            <label for="q4_optionD"><input type="radio" id="q4_optionD" name="q4" value="D"> D) 23</label><br>
+            <button onclick="checkAnswer('q4', 'D')">Submit</button>
+            <p id="q4_result"></p>
+        </div>
+
+        <div class="question">
+            <h2>Question 5: Verbal</h2>
+            <p>What is the synonym of "adversary"?</p>
+            <label for="q5_optionA"><input type="radio" id="q5_optionA" name="q5" value="A"> A) Friend</label><br>
+            <label for="q5_optionB"><input type="radio" id="q5_optionB" name="q5" value="B"> B) Enemy</label><br>
+            <label for="q5_optionC"><input type="radio" id="q5_optionC" name="q5" value="C"> C) Ally</label><br>
+            <label for="q5_optionD"><input type="radio" id="q5_optionD" name="q5" value="D"> D) Rival</label><br>
+            <button onclick="checkAnswer('q5', 'B')">Submit</button>
+            <p id="q5_result"></p>
+        </div>
+
+        <div class="question">
+            <h2>Question 6: Verbal</h2>
+            <p>Which of the following words is an antonym of "benevolent"?</p>
+            <label for="q6_optionA"><input type="radio" id="q6_optionA" name="q6" value="A"> A) Kind</label><br>
+            <label for="q6_optionB"><input type="radio" id="q6_optionB" name="q6" value="B"> B) Generous</label><br>
+            <label for="q6_optionC"><input type="radio" id="q6_optionC" name="q6" value="C"> C) Malevolent</label><br>
+            <label for="q6_optionD"><input type="radio" id="q6_optionD" name="q6" value="D"> D) Compassionate</label><br>
+            <button onclick="checkAnswer('q6', 'C')">Submit</button>
+            <p id="q6_result"></p>
+        </div>
+
+        <!-- Add more questions with options here -->
+
+        <h2>Total Marks: <span id="total_marks">0</span></h2>
+    </div>
+
+    <script>
+        let totalMarks = 0;
+
+        function checkAnswer(questionId, correctAnswer) {
+            const userAnswer = document.querySelector(`input[name=${questionId}]:checked`);
+            
+            if (userAnswer) {
+                if (userAnswer.value === correctAnswer) {
+                    document.getElementById(`${questionId}_result`).textContent = "Correct!";
+                    totalMarks += 1;
+                } else {
+                    document.getElementById(`${questionId}_result`).textContent = "Incorrect!";
+                }
+                document.getElementById('total_marks').textContent = totalMarks;
+            } else {
+                alert("Please select an answer before submitting.");
+            }
+        }
+    </script>
+</body>
+</html>
+
